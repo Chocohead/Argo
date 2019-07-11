@@ -19,8 +19,8 @@ import static argo.jdom.JsonFieldBuilder.aJsonFieldBuilder;
 /**
  * Builder for <code>JsonRootNode</code>s representing JSON objects.
  */
-public final class JsonObjectNodeBuilder implements JsonNodeBuilder<JsonRootNode> {
-
+public 
+final class JsonObjectNodeBuilder implements JsonNodeBuilder<JsonRootNode> {
 
     private final List<JsonFieldBuilder> fieldBuilders = new LinkedList<JsonFieldBuilder>();
 
