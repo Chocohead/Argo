@@ -56,12 +56,12 @@ final class JsonArray extends JsonRootNode {
         if (that == null || getClass() != that.getClass()) return false;
 
         final JsonArray thatJsonArray = (JsonArray) that;
-        return this.elements.equals(thatJsonArray.elements);
+        return ((Object)this.elements).equals(thatJsonArray.elements);
     }
 
     @Override
     public int hashCode() {
-        return elements.hashCode();
+        return ((Object)elements).hashCode();
     }
 
     @Override

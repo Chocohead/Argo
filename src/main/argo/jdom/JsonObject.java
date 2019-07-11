@@ -56,12 +56,12 @@ final class JsonObject extends JsonRootNode {
         if (that == null || getClass() != that.getClass()) return false;
 
         final JsonObject thatJsonObject = (JsonObject) that;
-        return this.fields.equals(thatJsonObject.fields);
+        return ((Object)this.fields).equals(thatJsonObject.fields);
     }
 
     @Override
     public int hashCode() {
-        return fields.hashCode();
+        return ((Object)fields).hashCode();
     }
 
     @Override
