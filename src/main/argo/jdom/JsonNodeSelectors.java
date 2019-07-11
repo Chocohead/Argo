@@ -352,9 +352,9 @@ public final class JsonNodeSelectors {
             } else if (pathElements[i] instanceof String) {
                 result = chainedJsonNodeSelector(anObjectNodeWithField((String) pathElements[i]), result);
             } else {
-                throw new IllegalArgumentException("Element [" + pathElements[i] + "] of path elements" +
-                        " [" + Arrays.toString(pathElements) + "] was of illegal type [" + pathElements[i].getClass().getCanonicalName()
-                        + "]; only Integer and String are valid.");
+                throw new IllegalArgumentException(new StringBuilder().append("Element [").append(pathElements[i]).append("] of path elements").append(" [").append(Arrays.toString(pathElements)).append("] was of illegal type [").append(pathElements[i].getClass().getCanonicalName()).append("]; only Integer and String are valid.").toString());
+
+
             }
         }
         return result;
