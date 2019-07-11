@@ -76,9 +76,9 @@ final class JsonArray extends JsonRootNode {
 
     private static List<JsonNode> asList(final Iterable<JsonNode> elements) {
         return new ArrayList<JsonNode>(){{
-            for (JsonNode element : elements) {
+            for (JsonNode element : elements)
                 this.add(element);
-            }
+
         }};
     }
 }

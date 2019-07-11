@@ -62,9 +62,9 @@ public final class JsonObjectNodeBuilder implements JsonNodeBuilder<JsonRootNode
 
     public JsonRootNode build() {
         return JsonNodeFactories.aJsonObject(new HashMap<JsonStringNode, JsonNode>() {{
-            for (JsonFieldBuilder fieldBuilder : fieldBuilders) {
+            for (JsonFieldBuilder fieldBuilder : fieldBuilders)
                 put(fieldBuilder.buildKey(), fieldBuilder.buildValue());
-            }
+
         }});
     }
 }

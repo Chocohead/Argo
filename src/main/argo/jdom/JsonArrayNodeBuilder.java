@@ -38,9 +38,9 @@ public final class JsonArrayNodeBuilder implements JsonNodeBuilder<JsonRootNode>
 
     public JsonRootNode build() {
         final List<JsonNode> elements = new LinkedList<JsonNode>();
-        for (JsonNodeBuilder elementBuilder : elementBuilders) {
+        for (JsonNodeBuilder elementBuilder : elementBuilders)
             elements.add(elementBuilder.build());
-        }
+
         return JsonNodeFactories.aJsonArray(elements);
     }
 }
