@@ -48,8 +48,8 @@ public final class CompactJsonFormatter implements JsonFormatter {
                         writer.append(',');
                     }
                     first = false;
-                    formatJsonNode(node, writer);
-                }
+                    formatJsonNode(node, writer); }
+
                 writer.append(']');
                 break;
             case OBJECT:
@@ -61,8 +61,8 @@ public final class CompactJsonFormatter implements JsonFormatter {
                     first = false;
                     formatJsonNode(field, writer);
                     writer.append(':');
-                    formatJsonNode(jsonNode.getFields().get(field), writer);
-                }
+                    formatJsonNode(jsonNode.getFields().get(field), writer); }
+
                 writer.append('}');
                 break;
             case STRING:
