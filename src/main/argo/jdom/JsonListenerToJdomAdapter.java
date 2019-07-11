@@ -17,6 +17,7 @@ import java.util.Stack;
 import static argo.jdom.JsonFieldBuilder.aJsonFieldBuilder;
 import static argo.jdom.JsonNodeBuilders.*;
 
+
 final class JsonListenerToJdomAdapter implements JsonListener {
 
     private final Stack<NodeContainer> stack = new Stack<NodeContainer>();

@@ -66,12 +66,13 @@ final class JsonArray extends JsonRootNode {
 
     @Override
     public String toString() {
-        return new StringBuilder()
-                .append("JsonArray elements:[")
-                .append(elements)
-                .append("]")
-                .toString();
+        return new StringBuilder().append("JsonArray elements:[").append(elements).append("]").toString();
     }
+
+
+
+
+
 
     private static List<JsonNode> asList(final Iterable<JsonNode> elements) {
         return new ArrayList<JsonNode>(){{

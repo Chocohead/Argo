@@ -15,6 +15,7 @@ final class JsonFieldBuilder {
     private JsonNodeBuilder<JsonStringNode> keyBuilder;
     private JsonNodeBuilder valueBuilder;
 
+
     private JsonFieldBuilder() { }
 
     static JsonFieldBuilder aJsonFieldBuilder() {

@@ -76,10 +76,6 @@ final class JsonNumberNode extends JsonNode {
 
     @Override
     public String toString() {
-        return new StringBuilder()
-                .append("JsonNumberNode value:[")
-                .append(value)
-                .append("]")
-                .toString();
+        return new StringBuilder().append("JsonNumberNode value:[").append(value).append("]").toString();
     }
 }

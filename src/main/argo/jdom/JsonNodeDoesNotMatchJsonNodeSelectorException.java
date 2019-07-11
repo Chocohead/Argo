@@ -11,6 +11,7 @@
 package argo.jdom;
 
 public class JsonNodeDoesNotMatchJsonNodeSelectorException extends IllegalArgumentException {
+
     JsonNodeDoesNotMatchJsonNodeSelectorException(final String s) {
         super(s);
     }

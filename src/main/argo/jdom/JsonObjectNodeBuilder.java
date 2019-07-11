@@ -21,6 +21,7 @@ import static argo.jdom.JsonFieldBuilder.aJsonFieldBuilder;
  */
 public final class JsonObjectNodeBuilder implements JsonNodeBuilder<JsonRootNode> {
 
+
     private final List<JsonFieldBuilder> fieldBuilders = new LinkedList<JsonFieldBuilder>();
 
     JsonObjectNodeBuilder() {}
@@ -57,6 +58,7 @@ public final class JsonObjectNodeBuilder implements JsonNodeBuilder<JsonRootNode
         fieldBuilders.add(jsonFieldBuilder);
         return this;
     }
+
 
     public JsonRootNode build() {
         return JsonNodeFactories.aJsonObject(new HashMap<JsonStringNode, JsonNode>() {{

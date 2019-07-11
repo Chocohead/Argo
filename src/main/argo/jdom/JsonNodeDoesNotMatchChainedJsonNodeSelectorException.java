@@ -15,9 +15,12 @@ import java.util.List;
 
 public final class JsonNodeDoesNotMatchChainedJsonNodeSelectorException extends JsonNodeDoesNotMatchJsonNodeSelectorException {
 
+
+
     static JsonNodeDoesNotMatchJsonNodeSelectorException createJsonNodeDoesNotMatchJsonNodeSelectorException(final Functor failedNode) {
         return new JsonNodeDoesNotMatchChainedJsonNodeSelectorException(failedNode, new LinkedList<JsonNodeSelector>());
     }
+
 
     static JsonNodeDoesNotMatchJsonNodeSelectorException createChainedJsonNodeDoesNotMatchJsonNodeSelectorException(final JsonNodeDoesNotMatchChainedJsonNodeSelectorException e,
                                                                                                                            final JsonNodeSelector parentJsonNodeSelector) {
@@ -26,6 +29,7 @@ public final class JsonNodeDoesNotMatchChainedJsonNodeSelectorException extends 
         return new JsonNodeDoesNotMatchChainedJsonNodeSelectorException(e.failedNode, chainedFailPath);
     }
 
+    
     static JsonNodeDoesNotMatchJsonNodeSelectorException createUnchainedJsonNodeDoesNotMatchJsonNodeSelectorException(final JsonNodeDoesNotMatchChainedJsonNodeSelectorException e,
                                                                                                                            final JsonNodeSelector parentJsonNodeSelector) {
         final LinkedList<JsonNodeSelector> unchainedFailPath = new LinkedList<JsonNodeSelector>();
@@ -36,12 +40,15 @@ public final class JsonNodeDoesNotMatchChainedJsonNodeSelectorException extends 
     final Functor failedNode;
     final List<JsonNodeSelector> failPath;
 
+    
+    
     private JsonNodeDoesNotMatchChainedJsonNodeSelectorException(final Functor failedNode, final List<JsonNodeSelector> failPath) {
         super("Failed to match any JSON node at [" + getShortFormFailPath(failPath) + "]");
         this.failedNode = failedNode;
         this.failPath = failPath;
     }
 
+    
     static String getShortFormFailPath(final List<JsonNodeSelector> failPath) {
         StringBuilder result = new StringBuilder();
         for (int i = failPath.size()-1; i >= 0; i--) {

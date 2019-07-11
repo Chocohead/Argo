@@ -71,12 +71,12 @@ public final class JsonStringNode extends JsonNode implements Comparable<JsonStr
 
     @Override
     public String toString() {
-        return new StringBuilder()
-                .append("JsonStringNode value:[")
-                .append(value)
-                .append("]")
-                .toString();
+        return new StringBuilder().append("JsonStringNode value:[").append(value).append("]").toString();
     }
+
+
+
+
 
     public int compareTo(final JsonStringNode that) {
         return this.value.compareTo(that.value);

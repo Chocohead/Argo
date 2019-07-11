@@ -66,10 +66,6 @@ final class JsonObject extends JsonRootNode {
 
     @Override
     public String toString() {
-        return new StringBuilder()
-                .append("JsonObject fields:[")
-                .append(fields)
-                .append("]")
-                .toString();
+        return new StringBuilder().append("JsonObject fields:[").append(fields).append("]").toString();
     }
 }
